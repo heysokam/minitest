@@ -1,6 +1,6 @@
-#:__________________________________________________________________
-#  lex  |  Copyright (C) Ivan Mar (sOkam!)  |  GNU GPLv3 or later  :
-#:__________________________________________________________________
+#:_______________________________________________________________________
+#  minitest  |  Copyright (C) Ivan Mar (sOkam!)  |  GNU GPLv3 or later  :
+#:_______________________________________________________________________
 # @deps std
 import std/unittest ; export unittest
 unittest.abortOnError = true
