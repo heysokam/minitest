@@ -18,7 +18,6 @@ pub const Fn     = fn () anyerror!void;
 //____________________________
 pub const A      = std.testing.allocator;
 pub const ok     = std.testing.expect;
-pub const err    = std.testing.expectError;
 pub const log    = struct {
   pub const info = std.debug.print;
 };
@@ -29,6 +28,7 @@ pub const not = struct {
   pub fn eq (value :anytype, expected :anytype) !void { try minitest.ok(minitest.check.not.eq(value, expected)); }
   pub fn eq_str (value :anytype, expected :anytype) !void { try minitest.not.ok(std.mem.eql(@TypeOf(value[0]), value, expected)); }
 };
+pub fn err (result :anytype, expectedError :anytype) !void { try std.testing.expectError(expectedError, result); }
 
 
 //______________________________________
