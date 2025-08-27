@@ -3,7 +3,7 @@
 > Description and Examples
 
 Tiny Single-file helper tools for writing Unit Tests.  
-Supports C, C++, Nim and Zig.  
+Supports C, C++ and Zig.  
 
 ### Minimalism
 `minitest` aims to be as minimal as possible, while still providing helpful tools.  
