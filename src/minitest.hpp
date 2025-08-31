@@ -1,7 +1,7 @@
-//:_______________________________________________________________________
-//  minitest  |  Copyright (C) Ivan Mar (sOkam!)  |  GNU GPLv3 or later  :
-//:_______________________________________________________________________
-#if !defined H_minitest
+//:____________________________________________________________
+//  minitest  |  Copyright (C) Ivan Mar (sOkam!)  |  MPL-2.0  :
+//:____________________________________________________________
+#ifndef H_minitest
 #define H_minitest
 // @deps stdlib
 #include <cassert>
