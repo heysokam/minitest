@@ -57,10 +57,10 @@
   }
 
 
-#define describe(title, body)                        \
-  int main() {                                       \
-    printf(color_C pfx_Name color_M " %s\n", title); \
-    do body while (0);                               \
-    return 0;                                        \
+#define describe(title, body)                                    \
+  int main() {                                                   \
+    printf(color_C pfx_Name color_M " %s\n" color_Reset, title); \
+    do body while (0);                                           \
+    return 0;                                                    \
   }
 
