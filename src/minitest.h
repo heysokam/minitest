@@ -2,8 +2,12 @@
 //  minitest  |  Copyright (C) Ivan Mar (sOkam!)  |  MPL-2.0  :
 //:____________________________________________________________
 #include <stdio.h>
-#include <stdbool.h>
 #include <assert.h>
+
+#include <stdbool.h>
+#define minitest_Fail 0  // False: Zero Means a test did not pass
+#define minitest_Pass 1  // True: Non-Zero means a test passed correctly
+#define minitest_Ok   0  // Status code returned when everything run correctly
 
 
 #if defined __unix
@@ -43,7 +47,7 @@
         __FILE__, __LINE__,                                  \
         #condition                                           \
       );                                                     \
-      return 1;                                              \
+      return minitest_Fail;                                  \
     }                                                        \
   } while (0);
 // clang-format on
@@ -53,7 +57,7 @@
   static bool name() {                                   \
     do body while (0);                                   \
     printf(color_G pfx_Pass color_Reset " %s\n", title); \
-    return 0;                                            \
+    return minitest_Pass;                                \
   }
 
 
@@ -61,6 +65,6 @@
   int main() {                                                   \
     printf(color_C pfx_Name color_M " %s\n" color_Reset, title); \
     do body while (0);                                           \
-    return 0;                                                    \
+    return minitest_Ok;                                          \
   }
 
