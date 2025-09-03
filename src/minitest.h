@@ -38,7 +38,7 @@
 // clang-format off
 #define check(condition, msg)                                \
   do {                                                       \
-    if (!condition) {                                        \
+    if (!(condition)) {                                      \
       printf(                                                \
         color_R pfx_Fail color_Y " %s" color_Reset ": %s\n"  \
         "    Failed check at     : %s:%d\n"                  \
